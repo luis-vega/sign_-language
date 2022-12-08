@@ -16,6 +16,11 @@ import os
 
 
 def main():
+    path_l=os.getcwd()
+    if not os.path.exists(path_l+"/pred_images/subfolder"):
+        os.makedirs(path_l+"/pred_images/subfolder")
+    if not os.path.exists(path_l+"/pred_images2/subfolder"):
+        os.makedirs(path_l+"/pred_images2/subfolder")
     st.set_page_config(page_title="Sign Language Translator", layout="wide")
     tab1, tab2, tab3 = st.tabs(["Home", "Model", "Team"])
     with tab1:
